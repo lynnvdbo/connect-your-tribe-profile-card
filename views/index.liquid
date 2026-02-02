@@ -1,14 +1,18 @@
 {% render 'partials/head.liquid' %}
 
-<article>
-  <header>
-    <h1>Hallo</h1>
-    <p>mijn naam is</p>
-  </header>
+ <article class="visitekaartje">
 
-  <p>{{ person.name }}</p>
+      <header>
+        <h1>{{ person.name }}</h1>
+        <p>Ik kijk er naar uit om mijn kennis te verbreden
+        <br>en mensen blij te maken met mijn werk.</p>
+      </header>
 
-  <footer></footer>
-</article>
+      <main class="main">
+        <img src="assets/Squad1J-Lynn.JPG" alt="" width="800" height="800" class="visitekaartje-img">
+        <p>FDND student</p>
+
+      </main>
+    </article>
 
 {% render 'partials/foot.liquid' %}
