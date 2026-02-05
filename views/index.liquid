@@ -1,30 +1,27 @@
 {% render 'partials/head.liquid' %}
 
-<article class="visitekaartje">
-
-  <header>
-        <img src="{{ person.avatar }}" alt="" width="800" height="800" class="visitekaartje-img">
-  </header>
-
   <main class="main">
-    <h1>{{ person.name }}</h1>
-    <p class="fdnd-student">{{ person.custom.fdndstudent }}</p>
-    <p class="tekst">{{ person.bio }}</p> 
+    <article class="visitekaartje">
+      <img src="{{ person.avatar }}" alt="" width="800" height="800" class="visitekaartje-img">
+      <h1>{{ person.name }}</h1>
+      <p class="fdnd-student">{{ person.custom.fdndstudent }}</p>
+      <p class="tekst">{{ person.bio }}</p> 
 
-    <div class="rij-blokjes rij-1">
-      <p class="blokjes">{{ person.custom.skill1 }}</p>
-      <p class="blokjes">{{ person.custom.skill2 }}</p>
-      <p class="blokjes">{{ person.custom.skill3 }}</p>
-    </div>
+      <div class="rij-blokjes rij-1">
+        <p class="blokjes">{{ person.custom.skill1 }}</p>
+        <p class="blokjes">{{ person.custom.skill2 }}</p>
+        <p class="blokjes">{{ person.custom.skill3 }}</p>
+      </div>
 
-    <div class="rij-blokjes">
-      <p class="blokjes">{{ person.custom.eigenschap1 }}</p>
-      <p class="blokjes">{{ person.custom.eigenschap2 }}</p>
-      <p class="blokjes">{{ person.custom.eigenschap3 }}</p>
-    </div>
+      <div class="rij-blokjes">
+        <p class="blokjes">{{ person.custom.eigenschap1 }}</p>
+        <p class="blokjes">{{ person.custom.eigenschap2 }}</p>
+        <p class="blokjes">{{ person.custom.eigenschap3 }}</p>
+      </div>
+    </article>
 
   </main>
 
-</article>
+
 
 {% render 'partials/foot.liquid' %}
