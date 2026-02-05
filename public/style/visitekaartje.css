@@ -71,6 +71,17 @@ h1 {
     background-color: #9FB0D3;
     margin: 1em 7em 0em 7em;
     padding: 0.4em 0em 0.4em 0em;
+    border: 3px solid #9FB0D3;
+
+    a {
+      color: black;
+      text-decoration: none;
+    }
+
+    &:hover {
+        background-color: transparent;
+        border: 3px solid #9FB0D3;
+    }
 }
 
 
@@ -81,6 +92,7 @@ h1 {
     margin: 1.2em 1em 0em 1em;
 }
 
+
 .rij-blokjes {
     display: flex;
     justify-content: space-around;
@@ -89,11 +101,49 @@ h1 {
     margin-right: 1.3em;
 }
 
+
+@keyframes fallFromTop {
+  from {
+    transform: translateY(-100vh); 
+  }
+  to {
+    transform: translateY(0); 
+  }
+}
+
+
+/* zorgt voor vertraging */
+.eigenschap1 { animation-delay: 0.5s; } /* creatief */
+.eigenschap2 { animation-delay: 1s; } /* sociaal */
+.eigenschap3 { animation-delay: 1.5s; } /* behulpzaam */
+.skill1 { animation-delay: 2s; }  /* js */
+.skill2 { animation-delay: 2.5s; }  /* html */
+.skill3 { animation-delay: 3s; } /* css */ 
+
+
 .rij-1 {
     margin: 2em 3.5em 0em 3.5em;
 }
 
+
 .blokjes {
     border: 5px solid #9FB0D3;
     padding: 0.4em;
+
+    animation-name: fallFromTop;
+    transform: translateY(-100vh); 
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in linear;
+    animation-fill-mode: forwards;
+
+    /* wanneer iemand in zijn instellingen 'vermindering beweging' aan heeft staan komt er geen animatie */
+    @media (prefers-reduced-motion: reduce) {
+      animation-name: none;
+      animation-duration: none;
+      animation-iteration-count: none;
+      animation-timing-function: ease-in none;
+      animation-fill-mode: none;
+    }
 }
+
