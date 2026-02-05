@@ -13,8 +13,23 @@ html:has(.visitekaartje) {
 /* achtergrond streepjes */
 body {
     background-color: 9FB0D3;
-    /* background-image: url("background-visitekaartje.jpg");  */
     background-image: url(streepjes-achtegrond-visitekaartje..png);
+}
+
+
+/* animtie die zorgt dat het visitekaartje een rondje draait */
+.visitekaartje:hover {
+    animation: rotateImage 2s infinite;
+} 
+
+@keyframes rotateImage {
+    0% {
+        transform: rotate3d(0, 0, 0, 0deg);
+    }
+
+    100% {
+        transform: rotate3d(0, 0, 1, 360deg);
+    }
 }
 
 
