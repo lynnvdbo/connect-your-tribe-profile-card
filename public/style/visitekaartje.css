@@ -102,12 +102,52 @@ h1 {
 }
 
 
-@keyframes fallFromTop {
-  from {
+.rij-1 {
+    margin: 2em 3.5em 0em 3.5em;
+}
+
+
+/* animatie blokjes */
+.blokjes {
+    border: 5px solid #9FB0D3;
+    padding: 0.4em;
+
+    animation-name: fallFromTop;
     transform: translateY(-100vh); 
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+
+    /* wanneer iemand in zijn instellingen 'vermindering beweging' aan heeft staan komt er geen animatie */
+    @media (prefers-reduced-motion: reduce) {
+      animation-name: none;
+      animation-duration: none;
+      animation-iteration-count: none;
+      animation-timing-function: ease-in none;
+      animation-fill-mode: none;
+    }
+}
+
+
+@keyframes fallFromTop {
+  0% {
+    transform: translateY(-100vh);
   }
-  to {
-    transform: translateY(0); 
+  70% {
+    transform: translateY(0);
+        background-color: rgb(255, 223, 186);
+  }
+  85% {
+    transform: translateY(-40px); /* - zorgt ervoor dat blokje weer terug omhoog bounct */
+        background-color: rgb(243, 206, 254);
+  }
+  95% {
+    transform: translateY(0px);
+        background-color: rgb(217, 232, 255);
+  }
+  100% {
+    transform: translateY(0);
   }
 }
 
@@ -121,29 +161,5 @@ h1 {
 .skill3 { animation-delay: 3s; } /* css */ 
 
 
-.rij-1 {
-    margin: 2em 3.5em 0em 3.5em;
-}
 
-
-.blokjes {
-    border: 5px solid #9FB0D3;
-    padding: 0.4em;
-
-    animation-name: fallFromTop;
-    transform: translateY(-100vh); 
-    animation-duration: 3s;
-    animation-iteration-count: 1;
-    animation-timing-function: ease-in linear;
-    animation-fill-mode: forwards;
-
-    /* wanneer iemand in zijn instellingen 'vermindering beweging' aan heeft staan komt er geen animatie */
-    @media (prefers-reduced-motion: reduce) {
-      animation-name: none;
-      animation-duration: none;
-      animation-iteration-count: none;
-      animation-timing-function: ease-in none;
-      animation-fill-mode: none;
-    }
-}
 
