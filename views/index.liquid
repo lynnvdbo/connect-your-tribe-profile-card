@@ -4,7 +4,9 @@
     <article class="visitekaartje">
       <img src="{{ person.avatar }}" alt="" width="800" height="800" class="visitekaartje-img">
       <h1>{{ person.name }}</h1>
-      <p class="fdnd-student">{{ person.custom.fdndstudent }}</p>
+          <div class="fdnd-student">
+            <a href="{{ person.website }}" >{{ person.custom.fdndstudent }}</a>
+          </div>
       <p class="tekst">{{ person.bio }}</p> 
 
       <div class="rij-blokjes rij-1">
