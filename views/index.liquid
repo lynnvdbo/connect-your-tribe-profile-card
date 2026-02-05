@@ -3,25 +3,24 @@
 <article class="visitekaartje">
 
   <header>
-        <img src="style/Squad1J-Lynn.JPG" alt="" width="800" height="800" class="visitekaartje-img">
+        <img src="{{ person.avatar }}" alt="" width="800" height="800" class="visitekaartje-img">
   </header>
 
   <main class="main">
     <h1>{{ person.name }}</h1>
-    <p class="fdnd-student">FDND student</p>
-    <p class="tekst">Ik kijk er naar uit om mijn kennis te verbreden
-    <br>en mensen blij te maken met mijn werk.</p> 
+    <p class="fdnd-student">{{ person.custom.fdndstudent }}</p>
+    <p class="tekst">{{ person.bio }}</p> 
 
     <div class="rij-blokjes rij-1">
-      <p class="blokjes">JAVASCRIPT</p>
-      <p class="blokjes">HTML</p>
-      <p class="blokjes">CSS</p>
+      <p class="blokjes">{{ person.custom.skill1 }}</p>
+      <p class="blokjes">{{ person.custom.skill2 }}</p>
+      <p class="blokjes">{{ person.custom.skill3 }}</p>
     </div>
 
     <div class="rij-blokjes">
-      <p class="blokjes">CREATIEF</p>
-      <p class="blokjes">SOCIAAL</p>
-      <p class="blokjes">BEHULPZAAM</p>
+      <p class="blokjes">{{ person.custom.eigenschap1 }}</p>
+      <p class="blokjes">{{ person.custom.eigenschap2 }}</p>
+      <p class="blokjes">{{ person.custom.eigenschap3 }}</p>
     </div>
 
   </main>
