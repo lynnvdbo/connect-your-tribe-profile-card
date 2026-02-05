@@ -46,6 +46,11 @@ app.get('/', async function (request, response) {
    response.render('index.liquid', {person: personResponseJSON.data})
 })
 
+app.get('/oefenen', async function (request, response) {
+   // Render practice.liquid uit de Views map en geef de opgehaalde data mee, in een variabele genaamd person
+   response.render('oefenen.liquid', {person: personResponseJSON.data})
+})
+
 // Had je meer pagina's in je oude visitekaartje? Zoals een contact.html?
 // Maak daar dan meer Routes voor aan, en koppel ze aan Views
 // app.get('/contact', function (request, response) {
@@ -70,3 +75,6 @@ app.listen(app.get('port'), function () {
   // Toon een bericht in de console en geef het poortnummer door
   console.log(`Application started on http://localhost:${app.get('port')}`)
 })
+
+
+

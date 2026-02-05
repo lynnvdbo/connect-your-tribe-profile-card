@@ -1,0 +1,24 @@
+{% render 'partials/head.liquid' %}
+
+<h1>Data-Driven Web</h1>
+<p>Ik ben dus {{ person.name }}</p>
+<p>Het is vandaag {{ 'now' | date: '%d-%m-%Y' }} </p>
+<p>{{ person.bio }}</p>
+
+
+{{ person.custom.fdndstudent }}
+<br>
+{{ person.custom.skill1 }}
+{{ person.custom.skill2 }}
+{{ person.custom.skill3 }}
+<br>
+{{ person.custom.eigenschap1 }}
+{{ person.custom.eigenschap2 }}
+{{ person.custom.eigenschap3 }}
+
+
+{% comment %} dit laat zien wat er in je database staat {% endcomment %}
+{% comment %} {{ person | json }} {% endcomment %}
+
+
+{% render 'partials/foot.liquid' %}
