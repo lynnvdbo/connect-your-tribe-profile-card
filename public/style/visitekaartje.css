@@ -20,7 +20,13 @@ body {
 /* animtie die zorgt dat het visitekaartje een rondje draait */
 .visitekaartje:hover {
     animation: rotateImage 2s infinite;
+
+    /* wanneer iemand in zijn instellingen 'vermindering beweging' aan heeft staan komt er geen animatie */
+    @media (prefers-reduced-motion: reduce) {
+    animation: none;
 } 
+}
+
 
 @keyframes rotateImage {
     0% {
@@ -136,6 +142,7 @@ h1 {
 
     /* wanneer iemand in zijn instellingen 'vermindering beweging' aan heeft staan komt er geen animatie */
     @media (prefers-reduced-motion: reduce) {
+      transform: translateY(0); 
       animation-name: none;
       animation-duration: none;
       animation-iteration-count: none;
