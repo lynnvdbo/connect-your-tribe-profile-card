@@ -1,8 +1,9 @@
 {% render 'partials/head.liquid' %}
 
   <main class="main">
+
     <article class="visitekaartje">
-      <img src="{{ person.avatar }}" alt="" width="800" height="800" class="visitekaartje-img">
+      <img src="{{ person.avatar }}" alt="foto {{ person.name }}" width="800" height="800" class="visitekaartje-img">
       <h1>{{ person.name }}</h1>
           <div class="fdnd-student">
             <a href="{{ person.website }}" >{{ person.custom.fdndstudent }}</a>
