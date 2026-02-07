@@ -11,15 +11,16 @@
       <p class="tekst">{{ person.bio }}</p> 
 
       <div class="rij-blokjes rij-skills">
-        <p class="blokjes javasript">{{ person.custom.skill1 }}</p>
-        <p class="blokjes html">{{ person.custom.skill2 }}</p>
-        <p class="blokjes css">{{ person.custom.skill3 }}</p>
+        {% comment %} | upcase is eenl Liquid filter {% endcomment %}
+        <p class="blokjes javasript">{{ person.custom.skill1 | upcase }}</p>
+        <p class="blokjes html">{{ person.custom.skill2 | upcase }}</p>
+        <p class="blokjes css">{{ person.custom.skill3 | upcase }}</p>
       </div>
 
       <div class="rij-blokjes">
-        <p class="blokjes creatief">{{ person.custom.eigenschap1 }}</p>
-        <p class="blokjes sociaal">{{ person.custom.eigenschap2 }}</p>
-        <p class="blokjes behulpzaam">{{ person.custom.eigenschap3 }}</p>
+        <p class="blokjes creatief">{{ person.custom.eigenschap1 | upcase }}  </p>
+        <p class="blokjes sociaal">{{ person.custom.eigenschap2 | upcase }}</p>
+        <p class="blokjes behulpzaam">{{ person.custom.eigenschap3 | upcase }}</p>
       </div>
     </article>
 
