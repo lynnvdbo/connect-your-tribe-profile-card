@@ -175,12 +175,12 @@ h1 {
 
 
 /* zorgt voor vertraging */
-.eigenschap1 { animation-delay: 0.5s; } /* creatief */
-.eigenschap2 { animation-delay: 1s; } /* sociaal */
-.eigenschap3 { animation-delay: 1.5s; } /* behulpzaam */
-.skill1 { animation-delay: 2s; }  /* js */
-.skill2 { animation-delay: 2.5s; }  /* html */
-.skill3 { animation-delay: 3s; } /* css */ 
+.creatief { animation-delay: 0.5s; } 
+.sociaal { animation-delay: 1s; } 
+.behulpzaam { animation-delay: 1.5s; } 
+.javasript { animation-delay: 2s; }  
+.html { animation-delay: 2.5s; }  
+.css { animation-delay: 3s; } 
 
 
 
